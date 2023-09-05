@@ -9,8 +9,7 @@
     <title>Food's D'Avilla</title>
     <meta name="title" content="Food's D'Avilla" />
     <meta name="description" content="Web site created using create-react-app" />
-    <meta name="keywords"
-        content="social media, marketing, marketing digital, SEO, Web developer, Desenvolvimento WEb, programação, programming">
+    <meta name="keywords" content="social media, marketing, marketing digital, SEO, Web developer, Desenvolvimento WEb, programação, programming">
     <meta name="revisit-after" content="1 day">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/" />
@@ -24,7 +23,6 @@
     <meta property="twitter:image" content="../src/assets/logo.png" />
     <link rel="apple-touch-icon" href="../src/assets/logo.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/fontawesome.css" />
     <link rel="stylesheet" href="./css/animate.css" />
@@ -41,15 +39,19 @@
     </a>
 
     <section class="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
+        <div class="navbar">
+            <nav class="container navbar navbar-expand-lg pl-0 pr-0 col-one">
                 <a class="navbar-brand wow fadeIn" href="#">
                     <img src="./img/logo.png" width="160" class="img-logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
-                    <span class="navbar-toggler-icon">
-                        <i class="fas fa-bars"></i>
-                    </span>
+                    <input id="menu-hamburguer" type="checkbox" />
+
+                    <label for="menu-hamburguer">
+                      <div class="menu">
+                        <span class="hamburguer"></span>
+                      </div>
+                    </label>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ml-auto mr-auto wow fadeIn">
@@ -66,7 +68,7 @@
                             <a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a>
                         </li>
                     </ul>
-                    <a class="btn btn-white btn-icon wow fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
+                    <a class="btn btn-nav btn-icon wow fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
                         Meu carrinho <span class="icon">
                             <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
                             <i class="fa fa-shopping-bag"></i>
@@ -88,14 +90,14 @@
                             segura.
                         </p>
                         <div class="wow fadeIn delay-05s">
-                            <a class="btn btn-yellow mt-4 mr-3">
+                            <a class="btn btn-white mt-4 mr-3">
                                 Ver cardápio
                             </a>
                             <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnLigar">
                                 <span class="icon-left">
                                     <i class="fa fa-phone"></i>
                                 </span>
-                                (11) 99999-9999
+                                (11) 99178-1497
                             </a>
                         </div>
                     </div>
@@ -365,12 +367,12 @@
                                 <h1 class="title">
                                     <b>Quer reservar um horário?</b>
                                 </h1>
-                                <p class="pr-5">
+                                <p class="pr-5 description">
                                     Mande uma mensagem clicando no botão abaixo
                                     <br>
                                     Reserve sua data e horário de forma simples e rápida.
                                 </p>
-                                <a class="btn btn-yellow mt-4 wow fadeIn delay-05s" href="#" id="btnReserva"
+                                <a class="btn btn-white mt-4 wow fadeIn delay-05s" href="#" id="btnReserva"
                                     target="_blank">
                                     Fazer reserva
                                 </a>
@@ -393,31 +395,55 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="row">
-
-                <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-logo-footer wow fadeIn">
-                    <img class="logo-footer" src="./img/logo.png" />
+        <div class="custom-shape-divider-bottom-1683068753">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container-fluid mt-5">
+            <div class="footer-card mx-5">
+                <div class="row mb-4">
+                    <div class="col-md-5 col-sm-5 col-xs-5">
+                        <div class="footer-text pull-left">
+                            <div class="d-flex">
+                                <!-- <h1 class="font-weight-bold mr-2 px-3" style="color:white; background-color:#957bda"> T
+                                </h1> -->
+                                <a class="wow fadeIn" href="#">
+                                    <img src="./img/logo.png" width="160" class="img-logo mr-2 px-3" />
+                                </a>
+                                <h1 style="color: var(--color-white)">Delicias da chefe Luh</h1>
+                            </div>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi non
+                                pariatur numquam animi nam at impedit odit nisi.</p>
+                            <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i
+                                    class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i
+                                    class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                    <div class="col-md-2 col-sm-2 col-xs-2">
+                        <h5 class="heading">Links</h5>
+                        <ul>
+                            <li>Reservas</li>
+                            <li>Serviços</li>
+                            <li>Cardárpio</li>
+                            <li>Depoimentos</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one container-texto-footer wow fadeIn">
-                    <p class="mb-0">
-                        Desenvolvido por: <strong>IDSYSTEMS</strong> &copy; Todos os direitos reservados
-                    </p>
+                <div class="divider mb-4"> </div>
+                <div class="row" style="font-size:10px;">
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="pull-left">
+                            <p class="text-left"><i class="fa fa-copyright"></i> 2023 Desenvolvido por:
+                                <strong><a href="https://idsystems-coral.vercel.app/">IDSYSTEMS</a></strong>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-redes-footer wow fadeIn">
-                    <a class="btn btn-sm btn-white btn-social mr-3">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="btn btn-sm btn-white btn-social mr-3">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="btn btn-sm btn-white btn-social">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-
             </div>
         </div>
     </footer>
@@ -454,7 +480,7 @@
                         <div class="form-group container-cep">
                             <label>CEP:</label>
                             <input id="txtCEP" type="text" class="form-control" />
-                            <a class="btn btn-yellow btn-sm" onclick="cardapio.metodos.buscarCep()">
+                            <a class="btn btn-white btn-sm" onclick="cardapio.metodos.buscarCep()">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -588,14 +614,14 @@
                     </p>
                 </div>
 
-                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-yellow float-right" id="btnEtapaPedido">
+                <a onclick="cardapio.metodos.carregarEndereco()" class="btn btn-white float-right" id="btnEtapaPedido">
                     Continuar
                 </a>
-                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden"
+                <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-white float-right hidden"
                     id="btnEtapaEndereco">
                     Revisar pedido
                 </a>
-                <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" target="_blank">
+                <a href="#" class="btn btn-white float-right hidden" id="btnEtapaResumo" target="_blank">
                     Enviar pedido
                 </a>
 

@@ -26,8 +26,20 @@
         padding-right: 35px!important;
     }
 
+    .navbar-toggler .btn:focus{
+        outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    .navbar-toggler:focus {
+        outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+
     .navbar-toggler-icon {
         padding-top: 5px;
+        color: var(--color-white);
     }
 
     .navbar-collapse {
@@ -62,7 +74,7 @@
         font-size: 18px;
     }
 
-    .btn-yellow, .btn-white {
+    .btn-white, .btn-white {
         padding: 13px 23px;
         font-size: 18px;
     }
